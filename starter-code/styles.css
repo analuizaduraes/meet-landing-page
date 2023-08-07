@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /*height: 100%;*/
+  }
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+header {
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: hidden;
+}
+
+main {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.heading {
+    color: #28283D;
+    font-size: 32px;
+}
+
+#h1 {
+    font-size: 40px;
+    padding-bottom: 24px;
+    padding-top: 58px;
+}
+
+.paragraph {
+    font-weight: 500;
+    font-size: 16px;
+    color: #87879D;
+}
+
+footer #h2 {
+    color: #FFF;
+    padding-bottom: 24px;
+}
+
+footer #p-footer {
+    font-size: 18px;
+    color: #FFF;
+    padding-bottom: 32px;
+}
+
+.buttons-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 16px 40px;
+    background-color: #855FB1;
+    color: #FFF;
+    cursor: pointer;
+    transition: all linear .3s;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    border: none;
+    border-radius: 29px;
+}
+
+.button:hover {
+    background-color: #B18BDD;
+}
+
+.button-1 {
+    background-color: #4D96A9;
+}
+
+.button-1 span {
+    color: #8FE3F9;
+}
+
+.button-1:hover {
+    background-color: #71C0D4;
+}
+
+.button-2 {
+    padding: 16px 29px;
+}
+
+.button-3 span {
+    color: #D9B8FF;
+}
+
+.page-divisor {
+    font-size: 16px;
+    color: #87879D;
+    background-color: #FAFAFA;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 148px;
+    position: relative;
+}
+
+.page-divisor:before {
+    content: "";
+    width: 1px;
+    height: 84px;
+    background-color: rgba(135, 135, 157, 0.25);
+    position: absolute;
+    top: -84px;
+    left: 28px;
+}
+
+main #h3 {
+    text-transform: uppercase;
+    color: #4D96A9;
+    font-size: 16px;
+    letter-spacing: 4px;
+    padding-bottom: 24px;
+}
+
+main .paragraph {
+    padding-top: 32px;
+}
+
+footer section {
+    padding-top: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+footer {
+    margin-top: 148px;
+    width: 100%;
+    min-height: 600px;
+    /*height: 100vh;
+    background-position: center;*/
+    background-size: cover;
+    background-image: url(./assets/mobile/image-footer.jpg); /*lightgray 0px 0px / 100% 100% no-repeat*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+footer::after {
+    position: absolute;
+    background: rgba(77, 150, 169, 10%); /*como mudar o grau de opacidade dessa cor apenas?*/
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+footer .page-divisor {
+    position: absolute;
+    left: calc(50% - 27px);
+    top: -177px;
+}
+
+.images-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-header-left {
+    max-width: 250px;
+}
+
+.image-header-right1 {
+    max-width: 250px;
+}
+
+.image-header-left, .image-header-right1, .image-header-right2 {
+    padding-top: 58px;
+}
+
+.image-header-right2 {
+    display: none;
+}
+
+header p {
+    padding-bottom: 32px;
+}
+
+.button-1 {
+    margin-bottom: 16px;
+}
+
+.gallery-main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.gallery-item {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;*/
+}
+
+@media screen and (min-width: 768px) {
+    .gallery-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .image-header-left {
+        max-width: 450px;
+    }
+    
+    .image-header-right1 {
+        max-width: 450px;
+    }
+
+    .buttons-header {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .button-1 {
+        margin-bottom: 0px;
+        margin-right: 16px;
+    }
+
+    footer {
+        min-height: 700px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    footer section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .image-header-right1 {
+        display: none;
+    }
+
+    .image-header-right2 {
+        display: block;
+    }
+
+    header section {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        justify-content: space-around;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+}
